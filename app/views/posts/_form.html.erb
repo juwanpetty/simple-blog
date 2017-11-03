@@ -1,0 +1,21 @@
+
+<%= form_for @post do |form| %>
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= form.label :content %><br>
+    <%= form.text_area :content %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+
+  <br>
+  <br>
+  <br>
+  <%= link_to 'Back', posts_path %>
+<% end %>
