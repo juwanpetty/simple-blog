@@ -16,7 +16,13 @@
 
   <body>
     <div class="top-nav">
-        <%= link_to "Simple Blog", root_path %>
+        <% if current_page?(@post) %>
+            <%= link_to root_path do %>
+                <i class="material-icons">arrow_back</i>Back
+            <% end %>
+        <% else %>
+            <%= link_to "Simple Blog", root_path %>
+        <% end %>
 
         <div>
             <%= link_to 'New Post', new_post_path, class: "control" %>

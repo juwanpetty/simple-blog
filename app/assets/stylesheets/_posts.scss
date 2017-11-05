@@ -59,6 +59,8 @@
                     height: 5px;
 
                     background: $accent-color;
+
+                    @include animation();
                 }
             }
         }
@@ -128,9 +130,10 @@
         .list-item {
             padding: 1.5rem 1rem;
 
-            & > a {
+            & > h1 a {
                 display: block;
                 margin-bottom: 0.5rem;
+                color: $accent-color;
             }   
             
             h1 {font-size: 20px;}

@@ -6,6 +6,14 @@ $red: #E75151;
 $text-primary: #32424A;
 $text-secondary: #8F979C;
 
+$duration: 100ms;
+$timing-function: ease-in-out;
+
+@mixin animation() {
+    transition-duration: $duration;
+    transition-timing-function: $timing-function;
+}
+
 @import 'reset';
 
 html {
