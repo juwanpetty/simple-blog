@@ -121,6 +121,18 @@ nav {
 
 .delete:hover {color: $red;}
 
+#error_explanation {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+    background: #F8CDD0;
+
+    h2 {margin-bottom: 1rem;}
+
+    li {margin-bottom: 0.5rem;}
+}
+
 @import 'typography';
 @import 'posts';
 @import 'form';
