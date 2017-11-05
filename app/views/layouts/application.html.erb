@@ -1,14 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>SimpleBlog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple Blog</title>
+
     <%= csrf_meta_tags %>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <div class="top-nav">
+        <%= link_to "Simple Blog", root_path %>
+
+        <div>
+            <%= link_to 'New Post', new_post_path, class: "control" %>
+            <div class="divider"></div>
+            <p>Writer at night.</p>
+        </div>
+    </div>
+
     <%= yield %>
+
+    <nav>
+        <div class="nav-links">
+            <%= link_to "About", about_path %>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </nav>
   </body>
 </html>

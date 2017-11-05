@@ -1,0 +1,52 @@
+@import url('https://rsms.me/inter/inter-ui.css');
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "Inter UI", sans-serif;
+}
+
+a {text-decoration: none;}
+
+h1 {
+    font-family: "Inter UI", sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.20;
+    letter-spacing: -0.72px;
+    word-spacing: 0.00px;
+    text-transform: none;
+}
+
+h2 {
+    font-family: "Inter UI", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.20;
+    letter-spacing: -0.72px;
+    word-spacing: 0.00px;
+    text-transform: none;
+}
+
+h3 {
+    font-family: "Inter UI", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.20;
+    letter-spacing: 0.00px;
+    word-spacing: 0.00px;
+    text-transform: none;
+}
+
+p {
+    font-family: "Inter UI", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.90;
+    letter-spacing: -0.30px;
+    word-spacing: 0.70px;
+    text-transform: none;
+}
+
+input[type="text"], input[type="email"], input[type="password"],
+textarea {font-family: "Inter UI", sans-serif;}

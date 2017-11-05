@@ -1,2 +1,11 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<section class="recent-posts">
+    <ul class="recent-posts-list">
+        <% @posts.each do |post| %>
+            <li class="list-item">
+                <%= link_to post.title, post_path(post), class: "post-link" %>
+            </li>
+        <% end %>
+
+        <%= link_to "Show all", posts_path, class: "btn" %>
+    </ul>
+</section>
