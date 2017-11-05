@@ -3,7 +3,7 @@
         <h1 class="title"><%= @post.title %></h1>
 
         <div class="subtitle">
-            <h3 class="date"><%= @post.created_at.strftime("%B %e %Y ") %></h3>
+            <h3 class="date"><%= @post.created_at.strftime("%B %e, %Y ") %></h3>
             
             <div class="divider"></div>
 
@@ -13,6 +13,6 @@
                                     data: {confirm: "Are you sure you want to delete this post?"} %>
             </div>
         </div>
-        <div class="content"> <%= @post.content %> </div>
+        <div class="content"> <%= markdown @post.content %> </div>
     </div>
 </section>
