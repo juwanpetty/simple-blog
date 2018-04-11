@@ -28,7 +28,7 @@
             <% if user_signed_in? %> 
                 <%= link_to 'New Post', new_post_path, class: "control" %>
                 <div class="divider"></div>
-                <%= link_to "Log out", logout_path, method: "delete", class: "control" %> 
+                <%= link_to "Log out", destroy_user_session_path, method: "delete", class: "control" %> 
             <% else %> 
                 <p>Writer at night.</p>
             <% end %>
