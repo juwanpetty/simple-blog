@@ -2,6 +2,12 @@
     <div class="post-content">
         <h1 class="title"><%= @post.title %></h1>
 
+        <% if @post.image %>
+            <div class="image-wrapper">
+                <%= image_tag @post.image.url %>
+            </div>
+        <% end  %>
+
         <div class="subtitle">
             <h3 class="date"><%= @post.created_at.strftime("%B %e, %Y ") %></h3>
             
