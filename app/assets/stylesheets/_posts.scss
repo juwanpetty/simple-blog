@@ -89,6 +89,16 @@
     padding-bottom: 20rem;
 
     .title {margin-bottom: 0.5rem;}
+
+    .image-wrapper {
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
     .date {
         font-size: 16px;
         opacity: 0.7;
