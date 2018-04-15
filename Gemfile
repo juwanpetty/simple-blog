@@ -34,6 +34,8 @@ gem 'redcarpet', '~> 3.4'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
 
+gem 'paperclip', '~> 6.0.0'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
