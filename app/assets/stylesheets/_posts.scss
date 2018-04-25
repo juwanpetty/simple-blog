@@ -21,7 +21,7 @@ $secondary-text: #5E5E5E;
         .list-item {
             width: 100%;
             padding: 1rem 0.5rem;
-            cursor: pointer;
+            // cursor: pointer;
 
             position: relative;
 
@@ -40,10 +40,6 @@ $secondary-text: #5E5E5E;
 
                 background: $border;
             }
-
-            &:hover {
-                a:before {width: 100%;}
-            }
             
             a {
                 font-size: 20px;
@@ -51,6 +47,10 @@ $secondary-text: #5E5E5E;
                 color: $text-primary;
                 
                 position: relative;
+
+                &:hover {
+                    &:before {width: 100%;}
+                }
 
                 &:before {
                     content: '';
@@ -280,7 +280,7 @@ $secondary-text: #5E5E5E;
 		h2 {
 			margin: 0;
 			font-weight: 500;
-			font-size: 42px;
+			font-size: 36px;
 			line-height: 120%;
 		}
 		
