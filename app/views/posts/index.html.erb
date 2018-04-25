@@ -1,12 +1,33 @@
-<section class="posts">
-  <ul class="posts-list">
-
-    <% @posts.each do |post| %>
-      <li class="list-item">
-        <h1><%= link_to post.title, post_path(post)%></h1>
-        <p> <%= post.content %> </p>
-      </li>
+<div class="slider">
+  <div class="slider-wrapper">
+    <% @posts.each_with_index do |post, index| %>
+      <% if (index == 0) %>
+        <div class="slide active">
+          <% if post.image.exists? %>
+            <div class="image-wrapper">
+              <%= image_tag post.image.url %>
+            </div>
+          <% end  %>
+        </div>
+      <% else %>
+        <div class="slide">
+          <% if post.image.exists? %>
+            <div class="image-wrapper">
+              <%= image_tag post.image.url %>
+            </div>
+          <% end  %>
+        </div>
+      <% end %>
     <% end %>
-      
-  </ul>
-</section>
+  </div>
+</div>
+
+<ul class="slider-nav">
+  <% @posts.each_with_index do |post, index| %>
+    <% if (index == 0) %>
+      <li class="active"><h2><%= link_to post.title, post_path(post)%></h2></li>
+    <% else %>
+      <li><h2><%= link_to post.title, post_path(post)%></h2></li>
+    <% end %>
+  <% end %>
+</ul>

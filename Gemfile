@@ -25,7 +25,10 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 
+gem 'pygments.rb', '~> 0.6.3'
 gem 'redcarpet', '~> 3.4'
+gem 'jquery-rails'
+
 
 # gem 'bcrypt', '3.1.11', platforms: [:ruby, :x64_mingw]
 # Use Redis adapter to run Action Cable in production

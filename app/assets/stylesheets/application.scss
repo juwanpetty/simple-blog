@@ -29,7 +29,6 @@ html {
 }
 
 body {
-    position: relative;
     color: $text-primary;
 }
 
@@ -53,10 +52,12 @@ nav {
     justify-content: space-between;
     top: initial;
     bottom: 0;  
+    pointer-events: none;
 
     .nav-links{
         a {
             color: #8F979C;
+            pointer-events: auto;
 
             &:hover {color: $accent-color;}
         }
@@ -134,5 +135,6 @@ nav {
 }
 
 @import 'typography';
+@import 'pygment';
 @import 'posts';
 @import 'form';

@@ -2,12 +2,6 @@
     <div class="post-content">
         <h1 class="title"><%= @post.title %></h1>
 
-        <% if @post.image.exists? %>
-            <div class="image-wrapper">
-                <%= image_tag @post.image.url %>
-            </div>
-        <% end  %>
-
         <div class="subtitle">
             <h3 class="date"><%= @post.created_at.strftime("%B %e, %Y ") %></h3>
             
@@ -21,6 +15,30 @@
                 </div>
             <% end %>
         </div>
-        <div class="content"> <%= markdown @post.content %> </div>
+
+        <% if @post.image.exists? %>
+            <div class="image-wrapper">
+                <%= image_tag @post.image.url %>
+            </div>
+        <% end  %>
+
+        <div class="content"> 
+            <%= markdown @post.content %> 
+        </div>
+
+        <div class="share-post">
+            <p>Share on </p>
+            <a onclick="
+                javascript:window.open('https://twitter.com/share?text=<%= @post.title %> by @juwanpetty — &amp;
+                url=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');
+                void(0);">
+                Twitter
+            </a>
+            <a onclick="
+                javascript:window.open('https://facebook.com/sharer.php?u=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');
+                void(0);">
+                Facebook
+            </a>
+        </div>
     </div>
 </section>
